@@ -1,9 +1,11 @@
 package it.davedella.easycrypt.controller
 
 import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
 
-@RestController()
+@RestController
+@RequestMapping("/rot13")
 class Rot13Controller {
 
     @GetMapping("/crypt")

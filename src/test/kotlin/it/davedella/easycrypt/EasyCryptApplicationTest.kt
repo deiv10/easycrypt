@@ -22,7 +22,7 @@ class EasyCryptApplicationTest {
     fun whenCalled_shouldReturnStringRot13Encrypted() {
         val result = testRestTemplate
                 // ...
-                .getForEntity("/crypt", String::class.java)
+                .getForEntity("/rot13/crypt", String::class.java)
 
         assertNotNull(result)
         assertEquals(result?.statusCode, HttpStatus.OK)
@@ -33,7 +33,7 @@ class EasyCryptApplicationTest {
     fun whenCalled_shouldReturnStringRot13Decrypted() {
         val result = testRestTemplate
                 // ...
-                .getForEntity("/decrypt", String::class.java)
+                .getForEntity("/rot13/decrypt", String::class.java)
 
         assertNotNull(result)
         assertEquals(result?.statusCode, HttpStatus.OK)
