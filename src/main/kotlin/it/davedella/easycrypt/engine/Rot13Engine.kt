@@ -1,5 +1,6 @@
 package it.davedella.easycrypt.engine
 
+import it.davedella.easycrypt.bean.Rot13Bean
 import org.apache.commons.collections4.bidimap.DualHashBidiMap
 import org.springframework.stereotype.Component
 
@@ -44,5 +45,7 @@ class Rot13Engine {
         string.forEach { result += rot13.get(it) ?: rot13.getKey(it) ?: it }
         return result;
     }
+
+    fun crypt(rot13Bean: Rot13Bean): String { return crypt(rot13Bean.stringValue)}
 
 }

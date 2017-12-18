@@ -19,6 +19,6 @@ class Rot13Controller {
 
     @PostMapping("/crypt")
     fun rot13CryptPost(@RequestBody rot13Bean: Rot13Bean): String {
-        return rot13Service.crypt(rot13Bean.stringValue)
+        return rot13Service.crypt(rot13Bean)
     }
 }
